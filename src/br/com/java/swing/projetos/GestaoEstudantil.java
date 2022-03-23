@@ -295,7 +295,7 @@ public class GestaoEstudantil extends JFrame{
 			btnExit.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					WindowManager.ui.clear();
+					GerenciadorDeJanelas.ui.clear();
 					System.exit(0);
 				}
 			});
@@ -303,10 +303,10 @@ public class GestaoEstudantil extends JFrame{
 		return btnExit;
 	}
 	private void mudarParaTelaDeLogin() {
-		LayoutDaTelaDeLogin entrarJanela = (LayoutDaTelaDeLogin) WindowManager.ui.get("LayoutDaTelaDeLogin");
+		LayoutDaTelaDeLogin entrarJanela = (LayoutDaTelaDeLogin) GerenciadorDeJanelas.ui.get("LayoutDaTelaDeLogin");
 		entrarJanela.setVisible(true);
 
-		GestaoEstudantil gestaoEstudantil = (GestaoEstudantil) WindowManager.ui.get("GestaoEstudantil");
+		GestaoEstudantil gestaoEstudantil = (GestaoEstudantil) GerenciadorDeJanelas.ui.get("GestaoEstudantil");
 		gestaoEstudantil.dispose();
 	}
 }
